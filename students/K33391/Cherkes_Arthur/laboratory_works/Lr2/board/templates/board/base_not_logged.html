@@ -1,0 +1,26 @@
+{% extends 'board/base.html' %}
+
+{% block title %}
+    Not Logged
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h5>
+                            {% block card_title %}
+                                Untitled
+                            {% endblock %}
+                        </h5>
+                        {% block content %}
+                            No content...
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

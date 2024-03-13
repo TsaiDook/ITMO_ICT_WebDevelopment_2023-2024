@@ -1,0 +1,15 @@
+<body>
+<span><h1>Cars</h1>
+      <a href="/car/create/">Add new one</a>
+</span>
+<ul>
+    {% for car in object_list %}
+        <li>Actions: <a href="/car/{{ car.car_id }}/update/">Edit</a> | <a href="/car/{{ car.car_id }}/delete/">Delete</a> | <a href="/car/{{ car.car_id }}/">Detail</a>
+            <p><strong>Brand:</strong> {{ car.brand }}</p>
+            <p><strong>Model:</strong> {{ car.model }}</p>
+        </li>
+    {% empty %}
+        <li>No cars yet.</li>
+    {% endfor %}
+</ul>
+</body>

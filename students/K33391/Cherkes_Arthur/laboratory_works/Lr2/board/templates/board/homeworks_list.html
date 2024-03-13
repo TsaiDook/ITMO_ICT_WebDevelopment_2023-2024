@@ -1,0 +1,26 @@
+{% extends 'board/base_logged.html' %}
+
+{% block title %}
+    Homeworks
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Educator</th>
+            <th scope="col">Published</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Details</th>
+        </tr>
+        {% for homework in homeworks %}
+            <tr>
+                <td>{{ homework.subject.name }}</td>
+                <td>{{ homework.educator.full_name }}</td>
+                <td>{{ homework.published }}</td>
+                <td>{{ homework.deadline }}</td>
+                <td><a href="{% url 'homework_detail_url' slug=homework.slug %}">Visit</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

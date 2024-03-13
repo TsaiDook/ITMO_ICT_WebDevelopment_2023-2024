@@ -1,0 +1,7 @@
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete car "{{ object }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+<br>
+<br>
+<a href="/cars/">Get back</a>

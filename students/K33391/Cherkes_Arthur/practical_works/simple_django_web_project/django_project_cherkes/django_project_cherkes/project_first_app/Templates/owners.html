@@ -1,0 +1,17 @@
+<body>
+<span><h1>Owners</h1>
+      <a href="/owner/create/">Add new one</a>
+</span>
+<ul>
+    {% for owner in owners %}
+        <li>
+            Actions: <a href="/owner/{{ owner.owner_id }}/">Detail</a>
+            <p><strong>First name:</strong> {{ owner.first_name }}</p>
+            <p><strong>Last name:</strong> {{ owner.last_name }}</p>
+
+        </li>
+    {% empty %}
+        <li>No owners yet.</li>
+    {% endfor %}
+</ul>
+</body>

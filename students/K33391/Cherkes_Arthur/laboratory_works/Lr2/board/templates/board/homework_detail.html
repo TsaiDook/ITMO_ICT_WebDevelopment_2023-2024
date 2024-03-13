@@ -1,0 +1,18 @@
+{% extends 'board/base_logged.html' %}
+
+{% block title %}
+    Homework
+{% endblock %}
+
+{% block content %}
+    <p><strong>Subject:</strong> {{ homework.subject.name }}</p>
+    <p><strong>Educator:</strong> {{ homework.educator.full_name }}</p>
+    <p><strong>Published:</strong> {{ homework.published }}</p>
+    <p><strong>Deadline:</strong> {{ homework.deadline }}</p>
+    <br>
+    <h2>Description:</h2>
+    <p>{{ homework.description }}</p>
+    <h2>Penalties</h2>
+    <p>{{ homework.penalties }}</p>
+    <a href="{% url 'solution_detail_url' slug=homework.slug %}">Add Solution</a>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'board/base_not_logged.html' %}
+
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block card_title %}
+    Log in
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'login_url' %}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            {% if field.errors %}
+                <div role="alert">
+                    {{ field.errors }}
+                </div>
+            {% endif %}
+
+            {{ field.label }}
+            {{ field }}
+        {% endfor %}
+
+        {% if form.non_field_errors %}
+            <div  role="alert">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <button type="submit">Log in</button>
+    </form>
+
+    <a href="{% url 'register_url' %}">Register</a>
+{% endblock %}

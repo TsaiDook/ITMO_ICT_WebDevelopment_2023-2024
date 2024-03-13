@@ -1,0 +1,26 @@
+{% extends 'board/base_logged.html' %}
+
+{% block title %}
+    Solutions
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <th scope="col">Homework</th>
+            <th scope="col">Published</th>
+            <th scope="col">Last Update</th>
+            <th scope="col">Details</th>
+        </tr>
+        {% for solution in solutions %}
+            <tr>
+                <td>
+                    <a href="{% url 'homework_detail_url' slug=solution.homework.slug %}">{{ solution.homework.slug }}</a>
+                </td>
+                <td>{{ solution.published }}</td>
+                <td>{{ solution.last_update }}</td>
+                <td><a href="{% url 'solution_detail_url' slug=solution.homework.slug %}">Visit</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

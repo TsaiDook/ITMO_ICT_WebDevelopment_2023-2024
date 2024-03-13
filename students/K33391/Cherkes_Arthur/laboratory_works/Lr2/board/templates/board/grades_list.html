@@ -1,0 +1,23 @@
+{% extends 'board/base_logged.html' %}
+
+{% block title %}
+    Grades
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <th>Homework</th>
+            <th>Student</th>
+            <th>Grade</th>
+        </tr>
+        {% for grade in grades %}
+            <tr>
+                <td><a href="{% url 'homework_detail_url' slug=grade.homework.slug %}">{{ grade.homework.slug }}</a>
+                </td>
+                <td>{{ grade.student.full_name }}</td>
+                <td>{{ grade.grade }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

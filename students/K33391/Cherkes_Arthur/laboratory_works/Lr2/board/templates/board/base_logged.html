@@ -1,0 +1,39 @@
+{% extends 'board/base.html' %}
+
+{% block title %}
+    Logged
+{% endblock %}
+
+{% block body %}
+        <div >
+            <ul >
+                <li >
+                    <a  aria-current="page" href="{% url 'homeworks_list_url' %}">Homeworks</a>
+                </li>
+                <li >
+                    <a  href="{% url 'grades_list_url' %}">Grades</a>
+                </li>
+                <li >
+                    <a  href="{% url 'solutions_list_url' %}">My Solutions</a>
+                </li>
+                <li >
+                    <a  href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul >
+                        <li><a  href="{% url 'profile_url' %}">Edit Profile</a></li>
+                        <li><a  href="{% url 'logout_url' %}">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    <div>
+            <div>
+                {% block content %}
+                    Nothing here...
+                {% endblock %}
+            </div>
+    </div>
+{% endblock %}
