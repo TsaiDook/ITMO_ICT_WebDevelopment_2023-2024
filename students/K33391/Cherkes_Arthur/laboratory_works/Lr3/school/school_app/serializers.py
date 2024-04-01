@@ -32,17 +32,17 @@ class GoodClassSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subjects
+        fields = '__all__'
 
 class TeachingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teachings
         fields = '__all__'
 
-class SubjectSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Subjects
-        fields = '__all__'
+
 
 class GradeSerializer(serializers.ModelSerializer):
     class Meta:
