@@ -60,6 +60,8 @@ class MyHTTPServer:
             discipline = params.get("discipline")
             grade = params.get("grade")
             self.grades[discipline].append(grade)
+
+
             self.send_response(client, 200, "OK", f'{discipline}: {grade} добавлено')
             print("POST 200 OK")
         else:

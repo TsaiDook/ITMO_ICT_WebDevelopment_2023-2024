@@ -55,9 +55,9 @@ print(data)
 conn.close()
 ```
 
-![image info](./../images/task1_1.png)
+![](lab1_images/task1_1.png)
 
-![image info](./../images/task1_2.png)
+![](lab1_images/task1_2.png)
 # Задание 2
 
 ## Описание Задачи
@@ -135,9 +135,9 @@ data = conn.recv(1024).decode("utf-8")
 print(data)
 ```
 
-![image info](./../images/task2_1.png)
+![](lab1_images/task2_1.png)
 
-![image info](./../images/task2_2.png)
+![](lab1_images/task2_2.png)
 # Задание 3
 
 ## Описание Задачи
@@ -216,7 +216,7 @@ conn.close()
 </body>
 </html>
 ```
-![image info](./../images/task3.png)
+![](lab1_images/task_3.png)
 # Задание 4
 
 ## Описание Задачи
@@ -299,9 +299,9 @@ while True:
     msg = input()
     conn.send(msg.encode("utf-8"))
 ```
-![image info](./../images/task4_1.png)
+![image info](lab1_images/task4_1.png)
 
-![image info](./../images/task4_2.png)
+![image info](lab1_images/task4_2.png)
 # Задание 5
 
 ## Описание Задачи
@@ -454,6 +454,6 @@ print(response)
 sock.close()
 ```
 
-![image info](./../images/task5_1.png)
+![](lab1_images/task5_1.png)
 
-![image info](./../images/task5_2.png)
+![](lab1_images/task5_2.png)
